@@ -4,14 +4,14 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Accountancy Co.',
-  description: 'Your trusted partner in navigating the complexities of finance.',
+  title: 'Taxplus Accountants',
+  description: 'Your trusted partner for accounting solutions in Drogheda.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-gray-100 text-gray-800">
+      <body className="font-sans bg-gray-50 text-gray-800">
         <Header />
         <main>{children}</main>
         <Footer />

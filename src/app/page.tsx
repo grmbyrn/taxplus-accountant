@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <section className="py-20">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">Accounting Solutions for Start-ups and SMEs</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -23,21 +23,21 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-gray-200 py-20">
+      <section className="bg-gray-50 py-16 md:py-20">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Industries We Serve</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Industries We Serve</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold">Construction</h3>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900">Construction</h3>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold">Trades</h3>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900">Trades</h3>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold">Services</h3>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900">Services</h3>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold">Landlords</h3>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900">Landlords</h3>
             </div>
           </div>
         </div>
