@@ -1,9 +1,19 @@
 import Hero from '@/components/Hero';
+import CardComponent from '@/components/CardComponent';
+import ClientLogos from '@/components/ClientLogos';
+import Testimonial from '@/components/Testimonial';
 
 export default function Home() {
   return (
     <main>
       <Hero />
+      <section className="py-16 md:py-20">
+        <div className="container mx-auto px-6">
+          <CardComponent />
+        </div>
+      </section>
+      <ClientLogos />
+      <Testimonial quote={["Taxplus Accountants transformed our financial management. Their expertise and personalized approach have been invaluable to our business growth.", "We highly recommend their services to any business looking for reliable and proactive accounting support."]} author="Jane Doe, CEO of Example Corp." />
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">Accounting Solutions for Start-ups and SMEs</h2>
