@@ -1,19 +1,28 @@
+'use client'
 import Hero from '@/components/Hero';
 import CardComponent from '@/components/CardComponent';
 import ClientLogos from '@/components/ClientLogos';
-import Testimonial from '@/components/Testimonial';
+import Services from '@/components/Services';
 
 export default function Home() {
   return (
     <main>
       <Hero />
+      <Services />
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-stripe-dark mb-4">Taxplus Accountants – the perfect Accounting solution for start ups and SME’s</h2>
+          <p className="text-lg text-gray-700 mb-4">Taxation | Payroll | Accounting</p>
+          <p className="text-lg text-gray-700 mb-4">Taxplus Accountants help small business owners who provide a service or trade to maximise their accounts.</p>
+          <p className="text-lg text-gray-700">Many businesses struggle with their accounts. We have a range of solutions that help business owners get better control over their finances so they can run and grow profitable companies.</p>
+        </div>
+      </section>
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-6">
           <CardComponent />
         </div>
       </section>
       <ClientLogos />
-      <Testimonial quote={["Taxplus Accountants transformed our financial management. Their expertise and personalized approach have been invaluable to our business growth.", "We highly recommend their services to any business looking for reliable and proactive accounting support."]} author="Jane Doe, CEO of Example Corp." />
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">Accounting Solutions for Start-ups and SMEs</h2>
