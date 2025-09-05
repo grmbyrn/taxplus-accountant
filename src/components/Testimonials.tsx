@@ -1,0 +1,153 @@
+import { useState } from 'react';
+import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+
+const Testimonials = () => {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  const testimonials = [
+    {
+      name: "David Martinez",
+      company: "Martinez Construction LLC",
+      role: "Owner",
+      content: "Premier Accounting transformed our financial management completely. Their expertise in construction accounting helped us increase our profit margins by 15% and stay compliant with all regulations. Sarah and her team are absolutely phenomenal.",
+      rating: 5,
+      industry: "Construction"
+    },
+    {
+      name: "Lisa Thompson",
+      company: "Thompson Marketing Agency",
+      role: "Founder & CEO",
+      content: "Working with Premier Accounting has been a game-changer for our agency. They handle everything from bookkeeping to tax planning, allowing us to focus on growing our client base. Their monthly reports are incredibly detailed and helpful.",
+      rating: 5,
+      industry: "Marketing"
+    },
+    {
+      name: "James Wilson",
+      company: "Wilson Family Restaurant",
+      role: "Restaurant Owner",
+      content: "The team at Premier Accounting saved us thousands in tax optimization and helped us navigate the complexities of restaurant finances. Their proactive approach and attention to detail is unmatched. Highly recommend!",
+      rating: 5,
+      industry: "Restaurant"
+    },
+    {
+      name: "Amanda Foster",
+      company: "Foster Consulting Group",
+      role: "Managing Partner",
+      content: "Premier Accounting's financial planning services helped us scale from a 2-person consultancy to a 12-person firm. Their strategic insights and cash flow management expertise were crucial to our growth.",
+      rating: 5,
+      industry: "Consulting"
+    }
+  ];
+
+  const nextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const current = testimonials[currentTestimonial];
+
+  return (
+    <section id="testimonials" className="py-20 bg-background">
+      <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            What Our Clients
+            <span className="text-primary block">Say About Us</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Don&apos;t just take our word for it. Here&apos;s what our satisfied clients 
+            have to say about our professional services.
+          </p>
+        </div>
+
+        {/* Main Testimonial */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <Card className="bg-gradient-subtle border-0 shadow-large">
+            <CardContent className="p-12 text-center">
+              <Quote className="w-16 h-16 text-primary mx-auto mb-8 opacity-20" />
+              
+              <blockquote className="text-2xl lg:text-3xl text-foreground font-medium leading-relaxed mb-8">
+                &quot;{current.content}&quot;
+              </blockquote>
+
+              <div className="flex justify-center mb-6">
+                {[...Array(current.rating)].map((_, i) => (
+                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                ))}
+              </div>
+
+              <div className="border-t border-border pt-8">
+                <div className="text-xl font-bold text-foreground mb-2">{current.name}</div>
+                <div className="text-primary font-medium mb-1">{current.role}</div>
+                <div className="text-muted-foreground">{current.company}</div>
+                <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mt-4">
+                  {current.industry}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Navigation */}
+          <div className="flex justify-center items-center space-x-6 mt-8">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={prevTestimonial}
+              className="border-primary text-primary hover:bg-primary hover:text-white"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </Button>
+
+            <div className="flex space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTestimonial(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    index === currentTestimonial ? 'bg-primary' : 'bg-gray-200'
+                  }`}
+                />
+              ))}
+            </div>
+
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={nextTestimonial}
+              className="border-primary text-primary hover:bg-primary hover:text-white"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </Button>
+          </div>
+        </div>
+
+        {/* Stats Row */}
+        <div className="grid sm:grid-cols-3 gap-8 text-center">
+          <div className="p-6">
+            <div className="text-4xl font-bold text-primary mb-2">98%</div>
+            <div className="text-lg font-semibold text-foreground mb-1">Client Satisfaction</div>
+            <div className="text-muted-foreground">Based on annual surveys</div>
+          </div>
+          <div className="p-6">
+            <div className="text-4xl font-bold text-primary mb-2">4.9/5</div>
+            <div className="text-lg font-semibold text-foreground mb-1">Average Rating</div>
+            <div className="text-muted-foreground">From verified reviews</div>
+          </div>
+          <div className="p-6">
+            <div className="text-4xl font-bold text-primary mb-2">95%</div>
+            <div className="text-lg font-semibold text-foreground mb-1">Client Retention</div>
+            <div className="text-muted-foreground">Long-term partnerships</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Testimonials;

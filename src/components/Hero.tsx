@@ -25,7 +25,7 @@ const Hero = () => {
               <br />
               for Your Business
             </h1>
-            
+
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl">
               Professional accounting, tax preparation, and financial planning services 
               designed to help your business thrive. Trust our experienced team to handle 

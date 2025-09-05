@@ -69,13 +69,11 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <Button 
-                  variant="ghost" 
-                  className="text-primary hover:text-primary-foreground hover:bg-primary group p-0 h-auto font-semibold"
-                >
-                  Learn More 
+                <Button variant="noHover">
+                  Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
+
               </CardContent>
             </Card>
           ))}

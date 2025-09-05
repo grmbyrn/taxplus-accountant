@@ -1,51 +1,153 @@
+import PageHeader from '@/components/PageHeader';
+import { Award, Users, Shield, Clock } from 'lucide-react';
 
-import Testimonial from '@/components/Testimonial';
+const About = () => {
+  const stats = [
+    {
+      icon: Award,
+      number: "15+",
+      label: "Years of Excellence",
+      description: "Serving businesses with expert financial guidance"
+    },
+    {
+      icon: Users,
+      number: "500+",
+      label: "Satisfied Clients",
+      description: "From startups to established enterprises"
+    },
+    {
+      icon: Shield,
+      number: "100%",
+      label: "Compliance Rate",
+      description: "Always up-to-date with tax laws and regulations"
+    },
+    {
+      icon: Clock,
+      number: "24/7",
+      label: "Support Available",
+      description: "We're here when you need us most"
+    }
+  ];
 
-const AboutPage = () => {
   return (
-    <div className="container mx-auto px-6 py-16 md:py-20">
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">About Taxplus Accountants</h1>
-      <div className="bg-white p-8 rounded-xl shadow-lg mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-gray-900">Our Story</h2>
-        <p className="text-lg mb-4 text-gray-700">Taxplus Accountants was founded in 2015 by John Byrne. With over 32 years of experience in a multinational company, John established Taxplus with a clear vision: to provide comprehensive accounting solutions tailored for small business owners, helping them to maximize their accounts and achieve financial success.</p>
+    <section id="about" className="bg-gradient-subtle">
+      <PageHeader
+        title="About"
+        backgroundImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left Content */}
+          <div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              <span className="text-primary block">TaxPlus Accountants</span>
+            </h2>
+            
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                Founded in 2009, Premier Accounting has been the trusted financial partner 
+                for hundreds of businesses across the region. Our team of certified public 
+                accountants and financial experts brings decades of combined experience to 
+                help you navigate complex financial challenges.
+              </p>
+              
+              <p>
+                We believe that every business deserves professional financial guidance, 
+                regardless of size. From sole proprietors to growing corporations, we 
+                provide personalized solutions that drive growth and ensure compliance.
+              </p>
+              
+              <p>
+                Our commitment to excellence, integrity, and client satisfaction has made 
+                us the go-to accounting firm for businesses who value precision, reliability, 
+                and strategic financial insight.
+              </p>
+            </div>
 
-        <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-900">What We Do</h2>
-        <p className="text-lg mb-4 text-gray-700">We offer a wide range of services designed to simplify financial management for businesses of all sizes. Our expertise includes:</p>
-        <ul className="list-disc list-inside text-lg mb-4 text-gray-700">
-          <li>Bookkeeping</li>
-          <li>Payroll</li>
-          <li>Taxation</li>
-          <li>Management Accounts</li>
-        </ul>
+            <div className="mt-12">
+              <h3 className="text-2xl font-bold text-foreground mb-6">Our Core Values</h3>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-primary rounded-full"></div>
+                  <span className="text-foreground font-medium">Integrity & Trust</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-primary rounded-full"></div>
+                  <span className="text-foreground font-medium">Professional Excellence</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-primary rounded-full"></div>
+                  <span className="text-foreground font-medium">Client-Focused Service</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-primary rounded-full"></div>
+                  <span className="text-foreground font-medium">Continuous Innovation</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-900">Who We Serve</h2>
-        <p className="text-lg mb-4 text-gray-700">We proudly work with a diverse client base, including:</p>
-        <ul className="list-disc list-inside text-lg mb-4 text-gray-700">
-          <li>SMEs (Small and Medium-sized Enterprises)</li>
-          <li>Start-ups</li>
-          <li>Sole Traders</li>
-          <li>Limited Companies</li>
-          <li>Partnerships</li>
-        </ul>
-        <p className="text-lg text-gray-700">Our commitment is to help our clients maximize their profits, ensure full compliance with Revenue and CRO regulations, and provide clear, actionable financial insights.</p>
+          {/* Right Stats */}
+          <div className="grid sm:grid-cols-2 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center p-8 bg-white rounded-2xl shadow-medium hover:shadow-large transition-shadow duration-300">
+                <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>
+                <div className="text-lg font-semibold text-foreground mb-2">{stat.label}</div>
+                <div className="text-sm text-muted-foreground leading-relaxed">{stat.description}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Team Section */}
+        <div className="mt-20 pt-20 border-t border-border">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Meet Our Expert Team
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Our certified professionals bring years of experience and dedication 
+              to every client relationship.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Sarah Johnson, CPA",
+                role: "Senior Partner & Tax Specialist",
+                experience: "12+ years of tax and accounting expertise"
+              },
+              {
+                name: "Michael Chen, CPA",
+                role: "Financial Planning Director",
+                experience: "10+ years in business advisory services"
+              },
+              {
+                name: "Emily Rodriguez, CPA",
+                role: "Bookkeeping & Compliance Manager",
+                experience: "8+ years in financial record management"
+              }
+            ].map((member, index) => (
+              <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-soft">
+                <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white font-bold text-2xl">
+                    {member.name.split(' ').map(n => n[0]).join('')}
+                  </span>
+                </div>
+                <h4 className="text-xl font-bold text-foreground mb-2">{member.name}</h4>
+                <p className="text-primary font-medium mb-2">{member.role}</p>
+                <p className="text-sm text-muted-foreground">{member.experience}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-      <Testimonial 
-        quote={[
-          'I’ve used John and Tax Plus Accountants Drogheda since 2012 and as a small sole-trader business I’ve found him and his team to be excellent. Their attention to detail and knowledge is first-class and they really ‘get’ the complexities and growing pains of small businesses.',
-          'John has always been very quick to reply and respond to my queries and has never failed to help me with any matter causing concern or when I needed some advice. Overall the value I’ve enjoyed has been fantastic. It’s no surprise that John’s business is growing from strength to strength.”'
-        ]}
-        author="Paul Clarke / Match-Fit"
-      />
-      <Testimonial 
-        quote={[
-          'Over the years our business, Impulse Agencies, has enjoyed a great working relationship with John and all the team at Tax Plus Accountants.',
-          'We feel comfortable in the knowledge that we can receive a quick and accurate answer to the smallest of queries that may arise to knowing that we can expect our Year End Accounts and Periodic Management Accounts to arrive on time – every time!',
-          'It has been a huge asset to have such valuable and professional guidance available here locally in Drogheda, and we wish John and all at Tax Plus Accounting every continued success.'
-        ]}
-        author="Tony / Impulse Agencies"
-      />
-    </div>
+    </section>
   );
 };
 
-export default AboutPage;
+export default About;
