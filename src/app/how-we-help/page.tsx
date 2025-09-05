@@ -9,13 +9,13 @@ const HowWeHelpPage = () => {
   return (
     <div>
       <PageHeader
-        title="The Types of Businesses We Help"
+        title="Types of Businesses We Help"
         backgroundImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1740&auto=format&fit=crop"
       />
 
       <div className="container mx-auto px-6 py-16 md:py-20 max-w-6xl">
         {/* Intro Card */}
-        <div className="p-8 bg-white rounded-2xl shadow-medium hover:shadow-large transition-shadow duration-300 border mb-14">
+        <div className="p-8 bg-white rounded-2xl shadow-medium hover:shadow-large transition-shadow duration-300 border mb-14 mx-8">
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
             TaxPlus Accountants helps SMEs, including small Limited Companies, sole traders and partnerships, that provide a service or trade to maximise their accounts.
           </p>
@@ -50,7 +50,7 @@ const HowWeHelpPage = () => {
         </div>
 
         {/* Active Tab Content */}
-        <div className="p-8 bg-white rounded-2xl shadow-medium hover:shadow-large transition-shadow duration-300 border">
+        <div className="p-8 bg-white rounded-2xl shadow-medium hover:shadow-large transition-shadow duration-300 border mx-8">
           {activeTab === "limited" && (
             <>
               <h2 className="text-3xl font-bold mb-6 text-blue-800">Limited Companies</h2>

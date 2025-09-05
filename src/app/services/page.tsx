@@ -1,9 +1,13 @@
+import PageHeader from "@/components/PageHeader";
 
 const ServicesPage = () => {
   return (
-    <div className="container mx-auto px-6 py-16 md:py-20">
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Our Services</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div>
+      <PageHeader
+        title="Our Services"
+        backgroundImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1740&auto=format&fit=crop"
+      />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 m-16">
         <div className="bg-white p-8 rounded-xl shadow-lg">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">Taxation</h2>
           <p className="text-gray-700">We offer a full range of taxation services for start-ups, sole traders, limited companies, and partnerships. Our experts will ensure you are compliant and help you minimize your tax liabilities.</p>

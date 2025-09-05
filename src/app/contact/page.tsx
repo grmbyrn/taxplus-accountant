@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
+import PageHeader from '@/components/PageHeader';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -78,14 +79,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-subtle">
+    <section id="contact" className="bg-gradient-subtle">
+      <PageHeader
+        title="Get In Touch With Our Team"
+        backgroundImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1740&auto=format&fit=crop"
+      />
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Get In Touch
-            <span className="text-primary block">With Our Team</span>
-          </h2>
+        <div className="text-center m-16">
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Ready to take control of your finances? Contact us today for a free consultation 
             and discover how we can help your business thrive.
