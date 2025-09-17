@@ -8,26 +8,26 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "David Martinez",
-      company: "Martinez Construction LLC",
+      name: "Paul Clarke",
+      company: "Match Fit",
       role: "Owner",
-      content: "Premier Accounting transformed our financial management completely. Their expertise in construction accounting helped us increase our profit margins by 15% and stay compliant with all regulations. Sarah and her team are absolutely phenomenal.",
+      content: ["I’ve used John and Tax Plus Accountants Drogheda since 2012 and as a small sole-trader business I’ve found him and his team to be excellent. Their attention to detail and knowledge is first-class and they really ‘get’ the complexities and growing pains of small businesses.Premier Accounting transformed our financial management completely. Their expertise in construction accounting helped us increase our profit margins by 15% and stay compliant with all regulations. Sarah and her team are absolutely phenomenal.", "John has always been very quick to reply and respond to my queries and has never failed to help me with any matter causing concern or when I needed some advice. Overall the value I’ve enjoyed has been fantastic. It’s no surprise that John’s business is growing from strength to strength."],
       rating: 5,
-      industry: "Construction"
+      industry: "Coaching"
     },
     {
-      name: "Lisa Thompson",
-      company: "Thompson Marketing Agency",
+      name: "Tony",
+      company: "Impulse Agencies",
       role: "Founder & CEO",
-      content: "Working with Premier Accounting has been a game-changer for our agency. They handle everything from bookkeeping to tax planning, allowing us to focus on growing our client base. Their monthly reports are incredibly detailed and helpful.",
+      content: ["Over the years our business, Impulse Agencies, has enjoyed a great working relationship with John and all the team at Tax Plus Accountants.", "We feel comfortable in the knowledge that we can receive a quick and accurate answer to the smallest of queries that may arise to knowing that we can expect our Year End Accounts and Periodic Management Accounts to arrive on time – every time!", "It has been a huge asset to have such valuable and professional guidance available here locally in Drogheda, and we wish John and all at Tax Plus Accounting every continued success."],
       rating: 5,
-      industry: "Marketing"
+      industry: "Wholesaler"
     },
     {
       name: "James Wilson",
       company: "Wilson Family Restaurant",
       role: "Restaurant Owner",
-      content: "The team at Premier Accounting saved us thousands in tax optimization and helped us navigate the complexities of restaurant finances. Their proactive approach and attention to detail is unmatched. Highly recommend!",
+      content: ["The team at Premier Accounting saved us thousands in tax optimization and helped us navigate the complexities of restaurant finances. Their proactive approach and attention to detail is unmatched. Highly recommend!"],
       rating: 5,
       industry: "Restaurant"
     },
@@ -35,7 +35,7 @@ const Testimonials = () => {
       name: "Amanda Foster",
       company: "Foster Consulting Group",
       role: "Managing Partner",
-      content: "Premier Accounting's financial planning services helped us scale from a 2-person consultancy to a 12-person firm. Their strategic insights and cash flow management expertise were crucial to our growth.",
+      content: ["Premier Accounting's financial planning services helped us scale from a 2-person consultancy to a 12-person firm. Their strategic insights and cash flow management expertise were crucial to our growth."],
       rating: 5,
       industry: "Consulting"
     }
@@ -73,7 +73,15 @@ const Testimonials = () => {
               <Quote className="w-16 h-16 text-primary mx-auto mb-8 opacity-20" />
               
               <blockquote className="text-2xl lg:text-3xl text-foreground font-medium leading-relaxed mb-8">
-                &quot;{current.content}&quot;
+              {Array.isArray(current.content) ? (
+                  current.content.map((para, i) => (
+                    <p key={i} className="mb-4 last:mb-0">
+                      {para}
+                    </p>
+                  ))
+                ) : (
+                  <p>{current.content}</p>
+                )}
               </blockquote>
 
               <div className="flex justify-center mb-6">
