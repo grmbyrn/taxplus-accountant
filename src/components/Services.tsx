@@ -1,6 +1,8 @@
-import { Calculator, FileText, BookOpen, TrendingUp, ArrowRight } from 'lucide-react';
+import { Calculator, FileText, BookOpen, TrendingUp, ArrowRight, ArrowUpRight } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';;
 import { Button } from '@/components/ui/button';
+import accountantsImage from '@/assets/accountants.jpg';
+import Image from 'next/image';
 
 const Services = () => {
   const services = [
@@ -34,67 +36,94 @@ const Services = () => {
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+        <div className="mb-16 text-left">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 border-l-4 border-blue-500 inline-block text-left pl-4">
             Professional Financial
             <span className="text-primary block">Services</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-3xl leading-relaxed">
             We provide comprehensive accounting and financial services tailored to meet 
             the unique needs of small businesses and individuals.
           </p>
+          <div className="flex mt-6">
+            <Image
+              src={accountantsImage}
+              alt="Accountants working together"
+              width={600}
+              height={300}
+              className="rounded-2xl"
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-medium transition-all duration-300 border-border hover:border-primary/20">
-              <CardHeader className="pb-4">
-                <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                <CardTitle className="text-2xl text-foreground group-hover:text-primary transition-colors">
-                  {service.title}
-                </CardTitle>
-                <CardDescription className="text-muted-foreground text-lg leading-relaxed">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-foreground">
-                      <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Button variant="noHover">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center bg-gradient-subtle rounded-2xl p-12">
-          <h3 className="text-3xl font-bold text-foreground mb-4">
-            Ready to Get Started?
+        {/* Blue Container */}
+        <div className="bg-[#2563eb] rounded-2xl p-10 mb-16"> {/* Warmer blue: Tailwind blue-600 */}
+          <h3 className="text-3xl font-bold text-white mb-6">
+            All-in-one accounting services
           </h3>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let us handle your financial needs so you can focus on growing your business. 
-            Schedule a free consultation today.
-          </p>
-          <Button 
-            size="lg"
-            className="bg-primary hover:bg-primary-blue-dark text-white shadow-blue text-lg px-8 py-6"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Schedule Free Consultation
-          </Button>
+          <div className="flex flex-row gap-4 mb-10">
+            <Button 
+              size="lg"
+              className="bg-white text-blue-700 font-semibold px-8 py-6 rounded-2xl w-64"
+            >
+              Contact Us
+            </Button>
+            <Button 
+              size="lg"
+              variant="outline"
+              className="border-white text-white font-semibold px-8 py-6 rounded-2xl w-64"
+            >
+              Browse All Services
+            </Button>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Service 1 */}
+            <a href="#" className="flex flex-col group w-full">
+              <Image
+                src={accountantsImage}
+                alt="Tax Planning"
+                width={384}
+                height={180}
+                className="rounded-2xl mb-4 w-full"
+                style={{ objectFit: 'cover' }}
+              />
+              <div className="flex items-center justify-between w-full">
+                <span className="text-lg font-semibold text-white group-hover:underline">Tax Planning</span>
+                <ArrowUpRight className="text-white group-hover:text-blue-200" size={22} />
+              </div>
+            </a>
+            {/* Service 2 */}
+            <a href="#" className="flex flex-col group w-full">
+              <Image
+                src={accountantsImage}
+                alt="Audit Services"
+                width={384}
+                height={180}
+                className="rounded-2xl mb-4 w-full"
+                style={{ objectFit: 'cover' }}
+              />
+              <div className="flex items-center justify-between w-full">
+                <span className="text-lg font-semibold text-white group-hover:underline">Audit Services</span>
+                <ArrowUpRight className="text-white group-hover:text-blue-200" size={22} />
+              </div>
+            </a>
+            {/* Service 3 */}
+            <a href="#" className="flex flex-col group w-full">
+              <Image
+                src={accountantsImage}
+                alt="Financial Consulting"
+                width={384}
+                height={180}
+                className="rounded-2xl mb-4 w-full"
+                style={{ objectFit: 'cover' }}
+              />
+              <div className="flex items-center justify-between w-full">
+                <span className="text-lg font-semibold text-white group-hover:underline">Financial Consulting</span>
+                <ArrowUpRight className="text-white group-hover:text-blue-200" size={22} />
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </section>
