@@ -1,36 +1,38 @@
-import { Calculator, FileText, BookOpen, TrendingUp, ArrowRight, ArrowUpRight } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';;
+// import { Calculator, FileText, BookOpen, TrendingUp, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
+
+// import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';;
 import { Button } from '@/components/ui/button';
 import accountantsImage from '@/assets/accountants.jpg';
 import Image from 'next/image';
 
 const Services = () => {
-  const services = [
-    {
-      icon: Calculator,
-      title: "Tax Preparation & Planning",
-      description: "Comprehensive tax services including preparation, planning, and year-round tax advisory to minimize your tax burden and maximize savings.",
-      features: ["Individual & Business Tax Returns", "Tax Planning Strategies", "IRS Representation", "Quarterly Estimated Payments"]
-    },
-    {
-      icon: FileText,
-      title: "Accounting Services",
-      description: "Full-service accounting solutions to keep your financial records accurate, organized, and compliant with all regulations.",
-      features: ["Financial Statement Preparation", "General Ledger Management", "Accounts Receivable/Payable", "Monthly Financial Reports"]
-    },
-    {
-      icon: BookOpen,
-      title: "Bookkeeping",
-      description: "Professional bookkeeping services to maintain accurate financial records and provide insights into your business performance.",
-      features: ["Daily Transaction Recording", "Bank Reconciliation", "Invoice Management", "Expense Tracking"]
-    },
-    {
-      icon: TrendingUp,
-      title: "Financial Planning",
-      description: "Strategic financial planning and advisory services to help you achieve your business goals and secure your financial future.",
-      features: ["Cash Flow Analysis", "Budget Planning", "Financial Forecasting", "Business Advisory"]
-    }
-  ];
+  // const services = [
+  //   {
+  //     icon: Calculator,
+  //     title: "Tax Preparation & Planning",
+  //     description: "Comprehensive tax services including preparation, planning, and year-round tax advisory to minimize your tax burden and maximize savings.",
+  //     features: ["Individual & Business Tax Returns", "Tax Planning Strategies", "IRS Representation", "Quarterly Estimated Payments"]
+  //   },
+  //   {
+  //     icon: FileText,
+  //     title: "Accounting Services",
+  //     description: "Full-service accounting solutions to keep your financial records accurate, organized, and compliant with all regulations.",
+  //     features: ["Financial Statement Preparation", "General Ledger Management", "Accounts Receivable/Payable", "Monthly Financial Reports"]
+  //   },
+  //   {
+  //     icon: BookOpen,
+  //     title: "Bookkeeping",
+  //     description: "Professional bookkeeping services to maintain accurate financial records and provide insights into your business performance.",
+  //     features: ["Daily Transaction Recording", "Bank Reconciliation", "Invoice Management", "Expense Tracking"]
+  //   },
+  //   {
+  //     icon: TrendingUp,
+  //     title: "Financial Planning",
+  //     description: "Strategic financial planning and advisory services to help you achieve your business goals and secure your financial future.",
+  //     features: ["Cash Flow Analysis", "Budget Planning", "Financial Forecasting", "Business Advisory"]
+  //   }
+  // ];
 
   return (
     <section id="services" className="py-20 bg-background">
