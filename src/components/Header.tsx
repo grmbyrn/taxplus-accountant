@@ -9,7 +9,7 @@ const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full z-50">
+    <header className="w-full z-50 max-w-7xl mx-auto px-4">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="text-2xl font-bold text-gray-800">
           <Link href="/">

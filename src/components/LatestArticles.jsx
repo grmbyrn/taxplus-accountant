@@ -17,7 +17,7 @@ const articles = [
 ];
 
 const LatestArticles = () => (
-  <section className="py-20 bg-background">
+  <section className="py-20">
     <div className="container mx-auto px-4 max-w-3xl">
       <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">
         Take a look at our news and articles

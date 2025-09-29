@@ -26,7 +26,7 @@ const carouselItems = [
 
 const About = () => {
   return (
-    <section id="about" className="bg-gradient-subtle container mx-auto px-4 py-20">
+    <section id="about" className="container mx-auto px-4 py-20">
       {/* Heading and intro */}
       <AboutOurCompany />
       {/* Mission section */}
@@ -55,7 +55,7 @@ const About = () => {
         </div>
       </div>
       {/* Section above carousel */}
-      <div className="mt-16 mb-8">
+      <div className="mt-16 mb-8 border-red-500">
         <div className="border-l-4 border-primary pl-6 mb-4">
           <h3 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">
             Types of businesses we help

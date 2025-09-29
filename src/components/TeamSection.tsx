@@ -1,5 +1,5 @@
 const TeamSection = () => (
-    <div className="mt-20 pt-20 border-t border-border">
+    <div className="mt-20 pt-20">
         <div className="text-center mb-16">
           <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Meet Our Expert Team
