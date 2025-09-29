@@ -75,13 +75,16 @@ const Services = () => {
               size="lg"
               variant="outline"
               className="border-white text-white font-semibold px-8 py-6 rounded-2xl w-64"
+              asChild
             >
-              Browse All Services
+              <a href="/services">
+                Browse All Services
+              </a>
             </Button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Service 1 */}
-            <a href="#" className="flex flex-col group w-full">
+            <a href="/services/tax-planning" className="flex flex-col group w-full">
               <Image
                 src={accountantsImage}
                 alt="Tax Planning"
@@ -96,7 +99,7 @@ const Services = () => {
               </div>
             </a>
             {/* Service 2 */}
-            <a href="#" className="flex flex-col group w-full">
+            <a href="/services/audit-services" className="flex flex-col group w-full">
               <Image
                 src={accountantsImage}
                 alt="Audit Services"
@@ -111,7 +114,7 @@ const Services = () => {
               </div>
             </a>
             {/* Service 3 */}
-            <a href="#" className="flex flex-col group w-full">
+            <a href="/services/financial-consulting" className="flex flex-col group w-full">
               <Image
                 src={accountantsImage}
                 alt="Financial Consulting"

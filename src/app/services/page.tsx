@@ -1,28 +1,124 @@
-import PageHeader from "@/components/PageHeader";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
+import accountantsImage from '@/assets/accountants.jpg';
 
 const ServicesPage = () => {
   return (
-    <div>
-      <PageHeader
-        title="Our Services"
-        backgroundImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1740&auto=format&fit=crop"
-      />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 m-16">
-        <div className="bg-white p-8 rounded-xl shadow-lg">
-          <h2 className="text-2xl font-bold mb-4 text-gray-900">Taxation</h2>
-          <p className="text-gray-700">We offer a full range of taxation services for start-ups, sole traders, limited companies, and partnerships. Our experts will ensure you are compliant and help you minimize your tax liabilities.</p>
+    <div className="container mx-auto px-4">
+      <div className="bg-[#2563eb] rounded-2xl p-10 mb-16"> {/* Warmer blue: Tailwind blue-600 */}
+        <h3 className="text-3xl font-bold text-white mb-6">
+          All-in-one accounting services
+        </h3>
+        <div className="flex flex-row gap-4 mb-10">
+          <Button 
+            size="lg"
+            className="bg-white text-blue-700 font-semibold px-8 py-6 rounded-2xl w-64"
+          >
+            Contact Us
+          </Button>
+          <Button 
+            size="lg"
+            variant="outline"
+            className="border-white text-white font-semibold px-8 py-6 rounded-2xl w-64"
+            asChild
+          >
+            <a href="/services">
+              Browse All Services
+            </a>
+          </Button>
         </div>
-        <div className="bg-white p-8 rounded-xl shadow-lg">
-          <h2 className="text-2xl font-bold mb-4 text-gray-900">Payroll</h2>
-          <p className="text-gray-700">Our payroll services are designed to be efficient and reliable. We handle all aspects of payroll management, so you can focus on your business.</p>
-        </div>
-        <div className="bg-white p-8 rounded-xl shadow-lg">
-          <h2 className="text-2xl font-bold mb-4 text-gray-900">Accounting</h2>
-          <p className="text-gray-700">We provide comprehensive accounting services for a variety of business structures. From bookkeeping to financial statements, we have you covered.</p>
-        </div>
-        <div className="bg-white p-8 rounded-xl shadow-lg">
-          <h2 className="text-2xl font-bold mb-4 text-gray-900">Business Start-Up</h2>
-          <p className="text-gray-700">We specialize in helping new businesses get started. We can assist with everything from company formation to business planning.</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Service 1 */}
+          <a href="/services/tax-planning" className="flex flex-col group w-full">
+            <Image
+              src={accountantsImage}
+              alt="Tax Planning"
+              width={384}
+              height={180}
+              className="rounded-2xl mb-4 w-full"
+              style={{ objectFit: 'cover' }}
+            />
+            <div className="flex items-center justify-between w-full">
+              <span className="text-lg font-semibold text-white group-hover:underline">Tax Planning</span>
+              <ArrowUpRight className="text-white group-hover:text-blue-200" size={22} />
+            </div>
+          </a>
+          {/* Service 2 */}
+          <a href="/services/audit-services" className="flex flex-col group w-full">
+            <Image
+              src={accountantsImage}
+              alt="Audit Services"
+              width={384}
+              height={180}
+              className="rounded-2xl mb-4 w-full"
+              style={{ objectFit: 'cover' }}
+            />
+            <div className="flex items-center justify-between w-full">
+              <span className="text-lg font-semibold text-white group-hover:underline">Audit Services</span>
+              <ArrowUpRight className="text-white group-hover:text-blue-200" size={22} />
+            </div>
+          </a>
+          {/* Service 3 */}
+          <a href="/services/financial-consulting" className="flex flex-col group w-full">
+            <Image
+              src={accountantsImage}
+              alt="Financial Consulting"
+              width={384}
+              height={180}
+              className="rounded-2xl mb-4 w-full"
+              style={{ objectFit: 'cover' }}
+            />
+            <div className="flex items-center justify-between w-full">
+              <span className="text-lg font-semibold text-white group-hover:underline">Financial Consulting</span>
+              <ArrowUpRight className="text-white group-hover:text-blue-200" size={22} />
+            </div>
+          </a>
+          {/* Service 4 */}
+          <a href="/services/payroll-processing" className="flex flex-col group w-full">
+            <Image
+              src={accountantsImage}
+              alt="Payroll Processing"
+              width={384}
+              height={180}
+              className="rounded-2xl mb-4 w-full"
+              style={{ objectFit: 'cover' }}
+            />
+            <div className="flex items-center justify-between w-full">
+              <span className="text-lg font-semibold text-white group-hover:underline">Payroll Processing</span>
+              <ArrowUpRight className="text-white group-hover:text-blue-200" size={22} />
+            </div>
+          </a>
+          {/* Service 5 */}
+          <a href="/services/tax-preparation" className="flex flex-col group w-full">
+            <Image
+              src={accountantsImage}
+              alt="Tax Preparation"
+              width={384}
+              height={180}
+              className="rounded-2xl mb-4 w-full"
+              style={{ objectFit: 'cover' }}
+            />
+            <div className="flex items-center justify-between w-full">
+              <span className="text-lg font-semibold text-white group-hover:underline">Tax Preparation</span>
+              <ArrowUpRight className="text-white group-hover:text-blue-200" size={22} />
+            </div>
+          </a>
+          {/* Service 6 */}
+          <a href="/services/bookkeeping" className="flex flex-col group w-full">
+            <Image
+              src={accountantsImage}
+              alt="Bookkeeping"
+              width={384}
+              height={180}
+              className="rounded-2xl mb-4 w-full"
+              style={{ objectFit: 'cover' }}
+            />
+            <div className="flex items-center justify-between w-full">
+              <span className="text-lg font-semibold text-white group-hover:underline">Bookkeeping</span>
+              <ArrowUpRight className="text-white group-hover:text-blue-200" size={22} />
+            </div>
+          </a>
         </div>
       </div>
     </div>
