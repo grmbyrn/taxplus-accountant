@@ -33,22 +33,17 @@ const Header = () => {
           </button>
         </div>
         <nav
-          className={`md:flex absolute md:relative top-24 left-0 md:top-0 w-full md:w-auto bg-background md:bg-transparent shadow-md md:shadow-none z-50 transition-all duration-300 ${
+          className={`absolute md:static top-24 left-0 md:top-0 w-full md:w-auto bg-background md:bg-transparent shadow-md md:shadow-none z-50 transition-all duration-300 ${
             isMenuOpen
               ? 'opacity-100 pointer-events-auto translate-y-0'
               : 'opacity-0 pointer-events-none -translate-y-4'
-          }`}
+          } md:opacity-100 md:pointer-events-auto md:translate-y-0 md:flex`}
           style={{ willChange: 'transform, opacity' }}
         >
-          <ul className="flex flex-col md:flex-row md:space-x-6 p-4 md:p-0">
+          <ul className="flex flex-col md:flex-row md:space-x-8 p-4 md:p-0 items-center">
             <li>
               <Link href="/" className="block py-2 text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMenuOpen(false)}>
                 Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/how-we-help" className="block py-2 text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMenuOpen(false)}>
-                How We Help
               </Link>
             </li>
             <li>
