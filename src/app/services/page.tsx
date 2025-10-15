@@ -1,12 +1,16 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
-import accountantsImage from '@/assets/accountants.jpg';
+import Service from "@/components/Service";
+import taxPlanningImage from '@/assets/tax-planning.jpg';
+import auditServicesImage from '@/assets/audit-services.jpg';
+import financialConsultingImage from '@/assets/financial-consulting.jpg';
+import payrollProcessingImage from '@/assets/payroll-processing.jpg';
+import taxPreparationImage from '@/assets/tax-preparation.jpg';
+import bookkeepingImage from '@/assets/bookkeeping.jpg';
 
 const ServicesPage = () => {
   return (
     <div className="container mx-auto px-4">
-      <div className="bg-[#2563eb] rounded-2xl p-10 mb-16"> {/* Warmer blue: Tailwind blue-600 */}
+      <div className="bg-[#2563eb] rounded-2xl p-10 mb-16">
         <h3 className="text-3xl font-bold text-white mb-6">
           All-in-one accounting services
         </h3>
@@ -29,96 +33,43 @@ const ServicesPage = () => {
           </Button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Service 1 */}
-          <a href="/services/tax-planning" className="flex flex-col group w-full">
-            <Image
-              src={accountantsImage}
-              alt="Tax Planning"
-              width={384}
-              height={180}
-              className="rounded-2xl mb-4 w-full"
-              style={{ objectFit: 'cover' }}
-            />
-            <div className="flex items-center justify-between w-full">
-              <span className="text-lg font-semibold text-white group-hover:underline">Tax Planning</span>
-              <ArrowUpRight className="text-white group-hover:text-blue-200" size={22} />
-            </div>
-          </a>
-          {/* Service 2 */}
-          <a href="/services/audit-services" className="flex flex-col group w-full">
-            <Image
-              src={accountantsImage}
-              alt="Audit Services"
-              width={384}
-              height={180}
-              className="rounded-2xl mb-4 w-full"
-              style={{ objectFit: 'cover' }}
-            />
-            <div className="flex items-center justify-between w-full">
-              <span className="text-lg font-semibold text-white group-hover:underline">Audit Services</span>
-              <ArrowUpRight className="text-white group-hover:text-blue-200" size={22} />
-            </div>
-          </a>
-          {/* Service 3 */}
-          <a href="/services/financial-consulting" className="flex flex-col group w-full">
-            <Image
-              src={accountantsImage}
-              alt="Financial Consulting"
-              width={384}
-              height={180}
-              className="rounded-2xl mb-4 w-full"
-              style={{ objectFit: 'cover' }}
-            />
-            <div className="flex items-center justify-between w-full">
-              <span className="text-lg font-semibold text-white group-hover:underline">Financial Consulting</span>
-              <ArrowUpRight className="text-white group-hover:text-blue-200" size={22} />
-            </div>
-          </a>
-          {/* Service 4 */}
-          <a href="/services/payroll-processing" className="flex flex-col group w-full">
-            <Image
-              src={accountantsImage}
-              alt="Payroll Processing"
-              width={384}
-              height={180}
-              className="rounded-2xl mb-4 w-full"
-              style={{ objectFit: 'cover' }}
-            />
-            <div className="flex items-center justify-between w-full">
-              <span className="text-lg font-semibold text-white group-hover:underline">Payroll Processing</span>
-              <ArrowUpRight className="text-white group-hover:text-blue-200" size={22} />
-            </div>
-          </a>
-          {/* Service 5 */}
-          <a href="/services/tax-preparation" className="flex flex-col group w-full">
-            <Image
-              src={accountantsImage}
-              alt="Tax Preparation"
-              width={384}
-              height={180}
-              className="rounded-2xl mb-4 w-full"
-              style={{ objectFit: 'cover' }}
-            />
-            <div className="flex items-center justify-between w-full">
-              <span className="text-lg font-semibold text-white group-hover:underline">Tax Preparation</span>
-              <ArrowUpRight className="text-white group-hover:text-blue-200" size={22} />
-            </div>
-          </a>
-          {/* Service 6 */}
-          <a href="/services/bookkeeping" className="flex flex-col group w-full">
-            <Image
-              src={accountantsImage}
-              alt="Bookkeeping"
-              width={384}
-              height={180}
-              className="rounded-2xl mb-4 w-full"
-              style={{ objectFit: 'cover' }}
-            />
-            <div className="flex items-center justify-between w-full">
-              <span className="text-lg font-semibold text-white group-hover:underline">Bookkeeping</span>
-              <ArrowUpRight className="text-white group-hover:text-blue-200" size={22} />
-            </div>
-          </a>
+          {/* Using the Service component for each service */}
+          <Service 
+            image={taxPlanningImage} 
+            alt="Tax Planning" 
+            link="tax-planning" 
+            service="Tax Planning" 
+          />
+          <Service 
+            image={auditServicesImage} 
+            alt="Audit Services" 
+            link="audit-services" 
+            service="Audit Services" 
+          />
+          <Service 
+            image={financialConsultingImage} 
+            alt="Financial Consulting" 
+            link="financial-consulting" 
+            service="Financial Consulting" 
+          />
+          <Service 
+            image={payrollProcessingImage} 
+            alt="Payroll Processing" 
+            link="payroll-processing" 
+            service="Payroll Processing" 
+          />
+          <Service 
+            image={taxPreparationImage} 
+            alt="Tax Preparation" 
+            link="tax-preparation" 
+            service="Tax Preparation" 
+          />
+          <Service 
+            image={bookkeepingImage} 
+            alt="Bookkeeping" 
+            link="bookkeeping" 
+            service="Bookkeeping" 
+          />
         </div>
       </div>
     </div>

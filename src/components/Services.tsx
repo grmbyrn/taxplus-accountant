@@ -7,6 +7,10 @@ import { Button } from '@/components/ui/button';
 import accountantsImage from '@/assets/accountants.jpg';
 import Image from 'next/image';
 
+import taxPlanningImage from '@/assets/tax-planning.jpg';
+import auditServicesImage from '@/assets/audit-services.jpg';
+import financialConsultingImage from '@/assets/financial-consulting.jpg';
+
 const Services = () => {
   // const services = [
   //   {
@@ -109,9 +113,9 @@ const Services = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-            <Service image={accountantsImage} alt={'Tax Planning'} link={'tax-planning'} service={'Tax Planning'} />
-            <Service image={accountantsImage} alt={'Audit Services'} link={'audit-services'} service={'Audit Services'} />
-            <Service image={accountantsImage} alt={'Financial Consulting'} link={'financial-consulting'} service={'Financial Consulting'} />
+            <Service image={taxPlanningImage} alt={'Tax Planning'} link={'tax-planning'} service={'Tax Planning'} />
+            <Service image={auditServicesImage} alt={'Audit Services'} link={'audit-services'} service={'Audit Services'} />
+            <Service image={financialConsultingImage} alt={'Financial Consulting'} link={'financial-consulting'} service={'Financial Consulting'} />
           </div>
         </div>
       </div>
